@@ -4,6 +4,8 @@ require 'json'
 require 'yaml'
 require 'shellwords'
 
+# Testing commit
+
 module Xcodeproj
 
   class Project
@@ -153,7 +155,7 @@ module Slather
           coverage_files.concat(create_coverage_files_for_binary(binary_path, left))
           coverage_files.concat(create_coverage_files_for_binary(binary_path, right))
         else
-          # pathnames_per_binary contains one element which is too big for the OS to handle. 
+          # pathnames_per_binary contains one element which is too big for the OS to handle.
           raise e, "#{e}. A path in your project is close to the E2BIG limit. https://github.com/SlatherOrg/slather/pull/414", e.backtrace
         end
       end
